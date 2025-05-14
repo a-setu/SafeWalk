@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeWalk - SpeakUp Community</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/module2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="module-header">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Home</a>
+        <h1><i class="fas fa-comment-dots"></i> SpeakUp Community</h1>
+        <div class="header-actions">
+            <button id="switch-module">Switch to Safety</button>
+        </div>
+    </header>
+
+    <main class="speakup-module">
+        <!-- Anonymous Reporting -->
+        <section class="reporting-section">
+            <h2><i class="fas fa-user-secret"></i> Anonymous Incident Reporting</h2>
+            <div class="reporting-tabs">
+                <button class="tab-button active" data-tab="workplace">Workplace</button>
+                <button class="tab-button" data-tab="street">Street</button>
+                <button class="tab-button" data-tab="public">Public Transport</button>
+            </div>
+            
+            <div class="tab-content active" id="workplace-tab">
+                <form id="workplace-report">
+                    <div class="form-group">
+                        <label for="workplace-org">Organization (optional)</label>
+                        <input type="text" id="workplace-org" placeholder="Company/organization name">
+                    </div>
+                    <div class="form-group">
+                        <label for="workplace-type">Incident Type</label>
+                        <select id="workplace-type" required>
+                            <option value="">Select type</option>
+                            <option value="verbal">Verbal Harassment</option>
+                            <option value="physical">Physical Harassment</option>
+                            <option value="discrimination">Discrimination</option>
+                            <option value="retaliation">Retaliation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="workplace-details">What happened?</label>
+                        <textarea id="workplace-details" required placeholder="Describe the incident..."></textarea>
+                    </div>
+                    <button type="submit">Submit Anonymously</button>
+                </form>
+            </div>
+            
+            <!-- Other tabs would have similar forms -->
+        </section>
+
+        <!-- Support Resources -->
+        <section class="resources-section">
+            <h2><i class="fas fa-hands-helping"></i> Support Resources</h2>
+            <div class="resource-filters">
+                <select id="resource-type">
+                    <option value="all">All Resources</option>
+                    <option value="legal">Legal Aid</option>
+                    <option value="mental">Mental Health</option>
+                    <option value="ngo">NGOs</option>
+                </select>
+                <input type="text" id="resource-location" placeholder="Filter by location">
+            </div>
+            
+            <div class="resource-list">
+                <!-- Resources will be loaded dynamically -->
+                <div class="resource-card">
+                    <h3>Women's Legal Center</h3>
+                    <p class="resource-type"><i class="fas fa-gavel"></i> Legal Aid</p>
+                    <p class="resource-location"><i class="fas fa-map-marker-alt"></i> Nationwide</p>
+                    <p class="resource-contact"><i class="fas fa-phone"></i> 1-800-555-HELP</p>
+                    <a href="#" class="resource-link">Visit Website</a>
+                </div>
+                <!-- More resources would appear here -->
+            </div>
+        </section>
+
+        <!-- Community Forum -->
+        <section class="forum-section">
+            <h2><i class="fas fa-users"></i> Community Forum</h2>
+            <div class="forum-controls">
+                <button id="new-post-btn"><i class="fas fa-plus"></i> New Post</button>
+                <select id="forum-filter">
+                    <option value="recent">Recent</option>
+                    <option value="popular">Popular</option>
+                    <option value="questions">Questions</option>
+                </select>
+            </div>
+            
+            <div class="forum-posts">
+                <!-- Posts will be loaded dynamically -->
+                <div class="forum-post">
+                    <div class="post-header">
+                        <span class="post-author">Anonymous User</span>
+                        <span class="post-date">2 days ago</span>
+                    </div>
+                    <h3 class="post-title">Dealing with street harassment</h3>
+                    <p class="post-content">What strategies have worked for others when dealing with persistent street harassers in downtown areas?</p>
+                    <div class="post-footer">
+                        <button class="vote-btn upvote"><i class="fas fa-thumbs-up"></i> 24</button>
+                        <button class="vote-btn downvote"><i class="fas fa-thumbs-down"></i> 2</button>
+                        <button class="comment-btn"><i class="fas fa-comment"></i> 8</button>
+                    </div>
+                </div>
+                <!-- More posts would appear here -->
+            </div>
+        </section>
+
+        <!-- Admin Dashboard (Visible only to admins) -->
+        <section class="dashboard-section hidden" id="admin-dashboard">
+            <h2><i class="fas fa-chart-line"></i> Safety Dashboard</h2>
+            <div class="dashboard-controls">
+                <select id="dashboard-timeframe">
+                    <option value="7days">Last 7 Days</option>
+                    <option value="30days">Last 30 Days</option>
+                    <option value="all">All Time</option>
+                </select>
+                <button id="export-data"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Total Reports</h3>
+                    <p class="stat-value">1,248</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Most Common Type</h3>
+                    <p class="stat-value">Verbal Harassment (42%)</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Hotspot Location</h3>
+                    <p class="stat-value">Downtown Area</p>
+                </div>
+            </div>
+            
+            <div class="dashboard-charts">
+                <!-- Charts would be implemented with Chart.js or similar -->
+                <div class="chart-container">
+                    <canvas id="reports-by-type"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="reports-by-location"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- New Post Modal -->
+    <div class="modal hidden" id="new-post-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create New Post</h2>
+            <form id="post-form">
+                <div class="form-group">
+                    <label for="post-title">Title</label>
+                    <input type="text" id="post-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-content">Content</label>
+                    <textarea id="post-content" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="post-anonymous" checked>
+                        Post anonymously
+                    </label>
+                </div>
+                <button type="submit">Publish Post</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/module2.js"></script>
+</body>
+</html>
