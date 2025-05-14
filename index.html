@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeWalk | UN SDG 5 Hackathon Project</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SDG 5 Background Element -->
+    <div class="sdg-bg">
+        <img src="assets/sdg-5-icon.png" alt="UN Sustainable Development Goal 5: Gender Equality">
+    </div>
+
+    <!-- Animated Background Elements -->
+    <div class="particles" id="particles-js"></div>
+
+    <!-- Main Content -->
+    <header class="hackathon-header">
+        <div class="logo">
+            <i class="fas fa-shield-alt"></i>
+            <h1>SafeWalk</h1>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#sdg">SDG Connection</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Empowering Women Through <span>Smart Safety Solutions</span></h2>
+                    <p class="subtitle">A hackathon project supporting UN Sustainable Development Goal 5: Gender Equality</p>
+                    <div class="cta-buttons">
+                        <a href="module1.html" class="cta-button primary">Try Safety Companion</a>
+                        <a href="module2.html" class="cta-button secondary">Explore SpeakUp</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/hero-illustration.png" alt="Woman walking safely with smartphone">
+                </div>
+            </div>
+            
+            <!-- Hackathon Badge -->
+            <div class="hackathon-badge">
+                <img src="assets/un-hackathon-logo.png" alt="UN Hackathon Participant">
+                <span>Official Submission</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h3>Our Mission</h3>
+                <h2>Making Public Spaces Safer for Women</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h4>The Challenge</h4>
+                    <p>Over 80% of women worldwide have experienced harassment in public spaces. We're changing that through technology.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Our Solution</h4>
+                    <p>SafeWalk combines real-time safety features with community support to create safer environments for women everywhere.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-globe"></i>
+                    <h4>Global Impact</h4>
+                    <p>Supporting UN SDG 5 by addressing gender-based violence and promoting women's safety in public spaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SDG Connection Section -->
+        <section id="sdg" class="sdg-section">
+            <div class="section-header">
+                <h3>Supporting the United Nations</h3>
+                <h2>Sustainable Development Goal 5</h2>
+            </div>
+            <div class="sdg-content">
+                <div class="sdg-text">
+                    <p>Our project directly contributes to achieving <strong>Gender Equality</strong> by:</p>
+                    <ul>
+                        <li>Reducing violence against women in public spaces (Target 5.2)</li>
+                        <li>Enhancing women's safety through technology (Target 5.b)</li>
+                        <li>Creating platforms for women's empowerment (Target 5.c)</li>
+                    </ul>
+                    <a href="https://sdgs.un.org/goals/goal5" target="_blank" class="sdg-link">
+                        Learn more about SDG 5
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="sdg-visual">
+                    <img src="assets/sdg-5-full.png" alt="UN SDG 5 Full Icon" class="sdg-icon">
+                    <div class="sdg-targets">
+                        <div class="target">5.2</div>
+                        <div class="target">5.b</div>
+                        <div class="target">5.c</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules Showcase -->
+        <section class="modules-section">
+            <div class="section-header">
+                <h3>Our Platform</h3>
+                <h2>Two Powerful Modules</h2>
+            </div>
+            <div class="module-cards">
+                <div class="module-card safety-companion">
+                    <div class="module-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety Companion</h3>
+                    </div>
+                    <div class="module-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Smart Route Finder</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Live Location Sharing</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Emergency SOS</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Safety Companion Mode</span>
+                        </div>
+                    </div>
+                    <a href="module1.html" class="module-cta">Explore Module</a>
+                </div>
+                <div class="module-card speakup">
+                    <div class="module-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>SpeakUp Community</h3>
+                    </div>
+                    <div class="module-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Anonymous Reporting</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Support Resources</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Community Forum</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Safety Dashboard</span>
+                        </div>
+                    </div>
+                    <a href="module2.html" class="module-cta">Explore Module</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="section-header">
+                <h3>Our Team</h3>
+                <h2>The Minds Behind SafeWalk</h2>
+            </div>
+            <div class="team-members">
+                <div class="member">
+                    <div class="member-image">
+                        <img src="assets/team-member1.jpg" alt="Team Member">
+                    </div>
+                    <h4>Arunoday Setu</h4>
+                    <p>Lead Developer</p>
+                    <div class="member-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-image">
+                        <img src="assets/team-member2.jpg" alt="Team Member">
+                    </div>
+                    <h4>Ayush Kumar</h4>
+                    <p>UX Designer</p>
+                    <div class="member-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-image">
+                        <img src="assets/team-member3.jpg" alt="Team Member">
+                    </div>
+                    <h4>Raj Vardhan</h4>
+                    <p> Backend</p>
+                    <div class="member-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-image">
+                        <img src="assets/team-member4.jpg" alt="Team Member">
+                    </div>
+                    <h4>Priyanshu Kumar</h4>
+                    <p>Frontend</p>
+                    <div class="member-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <h3>25+</h3>
+                <p>Countries with similar safety challenges</p>
+            </div>
+            <div class="stat-card">
+                <h3>80%</h3>
+                <p>Women experiencing public harassment</p>
+            </div>
+            <div class="stat-card">
+                <h3>2030</h3>
+                <p>UN target year for SDG achievement</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="hackathon-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <h2>SafeWalk</h2>
+                </div>
+                <p>Empowering women through technology for safer public spaces.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Modules</h4>
+                <a href="module1.html">Safety Companion</a>
+                <a href="module2.html">SpeakUp Community</a>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <a href="https://sdgs.un.org/goals/goal5" target="_blank">UN SDG 5</a>
+                <a href="#">Research Papers</a>
+                <a href="#">Safety Tips</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <a href="mailto:team@safewalk.org">team@safewalk.org</a>
+                <p>Hackathon Submission</p>
+                <p>United Nations SDG Challenge</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 SafeWalk Team. All rights reserved.</p>
+            <p>Created for the UN Sustainable Development Goals Hackathon</p>
+        </div>
+    </footer>
+
+    <!-- Particles.js for background animation -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scripts/landing.js"></script>
+</body>
+</html>
