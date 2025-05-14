@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeWalk - Safety Companion</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/module1.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="module-header">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Home</a>
+        <h1><i class="fas fa-shield-alt"></i> Safety Companion</h1>
+        <div class="header-actions">
+            <button id="switch-module">Switch to SpeakUp</button>
+        </div>
+    </header>
+
+    <main class="safety-module">
+        <!-- Map and Route Section -->
+        <section class="map-section">
+            <div id="safety-map"></div>
+            <div class="map-controls">
+                <div class="route-controls">
+                    <input type="text" id="destination-input" placeholder="Enter destination">
+                    <button id="find-route"><i class="fas fa-route"></i> Find Safest Route</button>
+                </div>
+                <div class="safety-options">
+                    <label>
+                        <input type="checkbox" id="avoid-dark-areas" checked>
+                        Avoid poorly lit areas
+                    </label>
+                    <label>
+                        <input type="checkbox" id="avoid-high-crime" checked>
+                        Avoid high crime areas
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Features Panel -->
+        <section class="safety-features">
+            <!-- Location Sharing -->
+            <div class="feature-card" id="location-sharing">
+                <h3><i class="fas fa-location-dot"></i> Live Location Sharing</h3>
+                <div class="feature-content">
+                    <select id="share-with">
+                        <option value="">Select contact to share with</option>
+                    </select>
+                    <div class="share-status">
+                        <span id="share-status-text">Not sharing</span>
+                        <label class="switch">
+                            <input type="checkbox" id="share-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <button id="im-home-btn"><i class="fas fa-house"></i> I'm Home</button>
+                </div>
+            </div>
+
+            <!-- Emergency SOS -->
+            <div class="feature-card emergency-card" id="emergency-sos">
+                <h3><i class="fas fa-bell"></i> Emergency SOS</h3>
+                <div class="emergency-content">
+                    <button id="sos-button">
+                        <i class="fas fa-triangle-exclamation"></i> HOLD FOR EMERGENCY
+                    </button>
+                    <div class="voice-control">
+                        <button id="voice-toggle"><i class="fas fa-microphone"></i> Enable Voice Control</button>
+                        <p>Say "HELP ME" to trigger emergency</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="feature-card" id="quick-actions">
+                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                <div class="quick-action-buttons">
+                    <button class="action-btn" data-action="fake-call">
+                        <i class="fas fa-phone"></i> Fake Call
+                    </button>
+                    <button class="action-btn" data-action="flashlight">
+                        <i class="fas fa-lightbulb"></i> Flashlight
+                    </button>
+                    <button class="action-btn" data-action="alarm">
+                        <i class="fas fa-bell"></i> Alarm
+                    </button>
+                    <button class="action-btn" data-action="record">
+                        <i class="fas fa-microphone"></i> Record
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Companion Mode -->
+        <section class="companion-section">
+            <h3><i class="fas fa-user-friends"></i> Safety Companion Mode</h3>
+            <div class="companion-controls">
+                <select id="companion-select">
+                    <option value="">Select a companion</option>
+                </select>
+                <div id="companion-status">
+                    <span>Status: Inactive</span>
+                    <div class="companion-timer hidden">
+                        <i class="fas fa-clock"></i>
+                        <span id="companion-eta">ETA: --:--</span>
+                    </div>
+                </div>
+                <button id="start-companion" disabled>Start Companion Mode</button>
+            </div>
+            <div id="companion-alerts" class="hidden">
+                <h4>Companion Alerts</h4>
+                <ul id="alert-list"></ul>
+            </div>
+        </section>
+
+        <!-- User Reports -->
+        <section class="report-section">
+            <h3><i class="fas fa-exclamation-triangle"></i> Report Unsafe Area</h3>
+            <form id="report-form">
+                <div class="form-group">
+                    <label for="report-type">Incident Type</label>
+                    <select id="report-type" required>
+                        <option value="">Select type</option>
+                        <option value="harassment">Harassment</option>
+                        <option value="lighting">Poor Lighting</option>
+                        <option value="suspicious">Suspicious Activity</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="report-details">Details (optional)</label>
+                    <textarea id="report-details" placeholder="Describe what happened..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="anonymous-report" checked>
+                        Submit anonymously
+                    </label>
+                </div>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Submit Report</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/module1.js"></script>
+</body>
+</html>
